@@ -1,0 +1,28 @@
+
+.wrapper {
+    position: relative;
+    padding-top: 14rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .titleWrapper {
+        display: flex;
+        margin-bottom: 3rem;
+        .title {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 40px;
+            line-height: 54px;
+    
+            text-align: center;
+    
+            color: #F5F8F9;
+            &.nft {
+                color: #14F1FF;
+            }
+        }
+    }
+    .grid {
+        margin-top: 66px;
+    }
+}

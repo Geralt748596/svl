@@ -1,0 +1,7 @@
+
+@mixin scale ($property) {
+    transition: transform .3s;
+    &:hover {
+        transform: scale($property);
+    }
+}

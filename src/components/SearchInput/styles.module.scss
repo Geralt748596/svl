@@ -1,0 +1,54 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+
+.wrapper {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    .searchInput {
+        position: relative;
+        border: 1px solid $searchInputBorder;
+        height: 32px;
+        width: 553px;
+        display: flex;
+        gap: 8px;
+        padding: 0 16px;
+        border-radius: 2px;
+        .iconWrapper {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .icon {
+                width: 20px;
+                height: 20px;
+            }
+            .close {
+                width: 14px;
+                height: 14px;
+                cursor: pointer;
+                @include scale(1.1);
+            }
+        }
+        .input {
+            flex: 1;
+            background: transparent;
+            border: none;
+            outline: none;
+        }
+    }
+    .button {
+        padding: 10px 14px;
+        background: #14F1FF;
+        border-radius: 2px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        text-align: center;
+        color: #001636;
+        border: none;
+        cursor: pointer;
+        @include scale(1.05);
+    }
+}

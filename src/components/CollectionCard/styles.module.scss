@@ -1,0 +1,56 @@
+@import '../../styles//variables.scss';
+
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 389px;
+    background: #01122A;
+    .imageWrapper {
+        flex: 1;
+        height: 325px;
+        > img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .footer {
+        padding: 16px 8px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .label {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            color: #FFFFFF;
+        }
+        .arrow {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+}
+
+.placeholder {
+    position: relative;
+    padding: 2px;
+    background: linear-gradient(to bottom, #005D84, #84007F);
+    display: flex;
+    height: 389px;
+
+    .background {
+        flex: 1;
+        background: $mainBackground;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .paceholderImage {
+            width: 120px;
+            height: 62px;
+        }
+    }
+}
