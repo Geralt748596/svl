@@ -37,7 +37,7 @@
 .placeholder {
     position: relative;
     padding: 2px;
-    background: linear-gradient(to bottom, #005D84, #84007F);
+    background: linear-gradient(to bottom, $searchInputBorder, #84007F);
     display: flex;
     height: 389px;
 

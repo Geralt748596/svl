@@ -1,5 +1,8 @@
 import { memo, useMemo, useState } from 'react';
 import Image from 'next/image';
+
+import { store } from '@/store';
+
 import styles from './styles.module.scss';
 import SearchIcon from './images/search.svg';
 import CloseIcon from './images/close.svg';
@@ -7,11 +10,17 @@ import CloseIcon from './images/close.svg';
 import strings from '@/strings';
 
 export const SearchInput = memo(({ onSearch }: Props) => {
-    const [value, setValue] = useState<string>('');
+    const [value, setValue] = useState<string>(store.address || '');
 
     const renderCloseIcon = useMemo(() => {
         return !!value ? (
-            <div className={styles.iconWrapper} onClick={() => setValue('')}>
+            <div
+                className={styles.iconWrapper}
+                onClick={() => {
+                    setValue('');
+                    store.address = null;
+                }}
+            >
                 <Image
                     src={CloseIcon}
                     alt=''
@@ -36,6 +45,7 @@ export const SearchInput = memo(({ onSearch }: Props) => {
     const handleSearch = () => {
         if (value) {
             onSearch(value);
+            store.address = value;
         }
     }
 

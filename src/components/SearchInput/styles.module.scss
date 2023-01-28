@@ -1,6 +1,8 @@
 @import '../../styles/variables.scss';
 @import '../../styles/mixins.scss';
 
+$close-icon-size: 14px;
+$search-icon-size: 20px;
 
 .wrapper {
     display: flex;
@@ -21,12 +23,12 @@
             justify-content: center;
             align-items: center;
             .icon {
-                width: 20px;
-                height: 20px;
+                width: $search-icon-size;
+                height: $search-icon-size;
             }
             .close {
-                width: 14px;
-                height: 14px;
+                width: $close-icon-size;
+                height: $close-icon-size;
                 cursor: pointer;
                 @include scale(1.1);
             }
@@ -40,13 +42,13 @@
     }
     .button {
         padding: 10px 14px;
-        background: #14F1FF;
+        background: $lightBlue;
         border-radius: 2px;
         font-style: normal;
         font-weight: 500;
         font-size: 14px;
         text-align: center;
-        color: #001636;
+        color: $mainBackground;
         border: none;
         cursor: pointer;
         @include scale(1.05);

@@ -1,4 +1,3 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next';
 import config from '@/config';
 
@@ -17,7 +16,7 @@ export default async function handler(
         const response = await result.json();
         if (response && response.data && response.data.metadata) {
             const meta = response.data.metadata;
-            res.status(200).json({ image: meta.image, name: meta.name });
+            res.status(200).json({ image: meta.image, name: meta.name || meta.symbol || meta.Uncollected });
         } else {
             res.status(500).json({ error: 'DUMMY' });
         }
